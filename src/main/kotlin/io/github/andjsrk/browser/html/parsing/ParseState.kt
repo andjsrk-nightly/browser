@@ -70,7 +70,7 @@ class ParseState {
         }
     }
     fun currentNode() =
-        openElements.top()
+        openElements.topOrNull()
     fun adjustedCurrentNode() =
         if (false/* TODO: the parser was created as part of the HTML fragment parsing algorithm */ && openElements.size == 1) TODO() // the context element
         else currentNode()
